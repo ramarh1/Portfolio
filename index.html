@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/905842a561.js" crossorigin="anonymous"></script>
+  <style>
+    /* General Styles */
+    body,
+    html {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      background-color: black;
+      color: color(display-p3 0.8693 0.861 0.99956);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: medium;
+      color: color(display-p3 0.8693 0.861 0.99956);
+    }
+
+    h2 {
+      color: color(display-p3 0.8693 0.861 0.99956);
+    }
+
+    h4 {
+      color: color(display-p3 0.8693 0.861 0.99956);
+    }
+
+    a {
+      background-color: black !important;
+      color: color(display-p3 0.8693 0.861 0.99956);
+    }
+
+
+    /* Navbar Styles */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      background-color: black;
+      padding: 10px 20px;
+      z-index: 1000;
+    }
+
+    .navbar .home {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      background: none;
+      border: none;
+      color: color(display-p3 0.8693 0.861 0.99956);
+      cursor: pointer;
+    }
+
+    .menu {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      background-color: black;
+      width: 100%;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      z-index: 1;
+    }
+
+    .menu a {
+      text-decoration: none;
+      padding: 10px 20px;
+      display: block;
+      width: 100%;
+    }
+
+    .menu a:hover {
+      background-color: gray;
+    }
+
+    .menu.active {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: black;
+      width: 100%;
+      position: relative;
+      left: 0;
+      z-index: 1;
+      margin-bottom: 5%;
+    }
+
+    .fa {
+
+      color: color(display-p3 0.8693 0.861 0.99956) !important;
+      font-size: large;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin: 0;
+      opacity: 100%;
+      color: color(display-p3 0.8693 0.861 0.99956);
+      background-color: black;
+    }
+
+    .hero .btn {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: black;
+      color: color(display-p3 0.8693 0.861 0.99956);
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero .btn:hover {
+      background-color: color(display-p3 0.60831 0.14048 0.04979);
+    }
+
+    div.row {
+      /* padding-top: 40% !important; */
+      display: relative;
+      padding-top: 10%;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+
+
+
+    .bg-image {
+      /* The image used */
+      background-image: url("https://www.canva.com/design/DAGcti6kMcY/SeXfcBqKscycr7flG0crzA/view");
+      
+      /* Add the blur effect */
+      /* filter: blur(8px); */
+
+      /* Full height */
+      height: 100%;
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    /* Footer */
+    footer {
+      width: 100%;
+      text-align: center;
+      padding-bottom: 0%;
+      font-size: 0.9rem;
+      opacity: 0.6;
+      position: absolute;
+      bottom: 0;
+      height: 100px;
+      overflow: hidden;
+      justify-content: center;
+    }
+
+    footer a {
+      color: color(display-p3 0.8693 0.861 0.99956);
+      background-color: black;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: none;
+    }
+  </style>
+
+
+
+
+</head>
+
+<body>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.classList.toggle("active");
+    }
+  </script>
+
+  <script>
+
+    // Function to toggle the bar
+    function geeksforgeeks() {
+      let x = document.getElementById("menus");
+
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+
+    // Function to toggle the plus menu into minus
+    function myFunction(x) {
+      x.classList.toggle("fa-minus-circle");
+    }
+
+  </script>
+
+
+  <div class="hero">
+    <h1>Ramar Huntley</h1>
+  </div>
+
+  <div class="navbar">
+    <button class="menu-toggle" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Expandable Menu -->
+  <div class="menu" id="menu">
+    <a href="#">About Me</a>
+    <a href="#">My Projects</a>
+    <a href="#">Blog</a>
+    <a href="#">Services</a>
+    <a href="#">Contact Page</a>
+    <a href="#">Resume/CV</a>
+  </div>
+
+  <div class="row">
+    <i class="fa-solid fa-spinner fa-spin-pulse" style="font-size: xx-large;"></i>
+    <h2>ROUTINE MAINTENANCE</h2>
+    <h4>Sorry! This page is currently <span style="color:crimson;">under maintenance</span>. Please check back
+      later.</h4>
+
+      <!-- <img src="https://www.canva.com/design/DAGcti6kMcY/SeXfcBqKscycr7flG0crzA/view" alt="Placeholder Image" width="auto"> -->
+  </div>
+  <!-- Footer -->
+  <footer>
+    © 2025 Ramar Huntley | <a href="mailto:contact@ramarhuntley.com">Contact Me</a>
+  </footer>
+</body>
+
+</html>
